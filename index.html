@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css"/>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js'></script>
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js'></script>
+  
+	<script src="socket.io-1.3.2.js"></script>
+	<script src="angular-socket.js"></script>
+
+	<script type="application/javascript" src="app.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+	<div id="wrap">
+		<div class="navbar navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">Digital Bid Wars</div>
+				<div class="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li> 
+						<li><a href="#bidder">Bidder</a></li>
+						<li><a href="#items">Items</a></li>	
+						<li><a href="#login">Login</a></li> 
+						<li><a href="#createAccount">Create Account</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div ng-view></div>
+	</div>
+</body>
+</html>
