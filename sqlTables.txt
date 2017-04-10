@@ -1,0 +1,6 @@
+create table Bid(
+		BidID int,
+        BidAmount int,
+        itemID int,
+        userID int
+        );
