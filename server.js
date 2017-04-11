@@ -21,7 +21,7 @@ var testConnection = function(){
 		  database : 'auction'
 	});
 	connection.connect();
-	connection.query("INSERT INTO Bid(BidID, BidAmount, ItemID, UserID) VALUES('1','1','1','1');", function(err, rows, fields) {
+	connection.query("INSERT INTO Items(ItemDescription, MinBidAmount, TopBidID, Name, ItemID) VALUES ("+"'Hello World','40','1','test','1');",function(err, rows, fields) {
 	if (err){
 					console.log("ERROR creating table");
 			}
@@ -29,7 +29,7 @@ var testConnection = function(){
 	//connection.query("INSERT INTO ")
 	connection.end();
 }
-server.listen(3000, function(){
+server.listen(8080, function(){
     console.log('Listening at port 8080');
 	testConnection();
 });

@@ -1,19 +1,12 @@
 var exports = module.exports = {};
 
-exports.User = function(usernameP,passwordP,userIDP) {
+exports.User = function(usernameP,passwordP,userIDP, isAdminP) {
 	var self = {
 		username: usernameP,
 		password: passwordP,
-		userID: userIDP
+		userID: userIDP,
+		isAdmin: isAdminP
 	}
-	self.getUsername(){
-		return username;
-	}
-	self.getPassword(){
-		return password;
-	}
-	self.getUserID(){
-		return userID;
-	}
+	
 	
 }

@@ -4,3 +4,16 @@ create table Bid(
         itemID int,
         userID int
         );
+create table Items(
+	ItemDescription char(255),
+	MinBidAmount int,
+	TopBidID int,
+	Name char(30),
+	ItemID int
+	);
+create table Users(
+	Username char(30),
+	Password char(30),
+	UserID int,
+	IsAdmin Bit
+	);
