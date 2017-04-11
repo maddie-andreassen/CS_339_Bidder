@@ -9,22 +9,5 @@ exports.Item = function(itemDescriptionP,picP,minBidAmountP,topBidP,nameP,itemID
 		name:nameP,
 		itemID:itemIDP
 	}
-	self.getItemDescription(){
-		return itemDescription;
-	}
-	self.getPic(){
-		return pic;
-	}
-	self.getMinBidAmount(){
-		return minBidAmount;
-	}
-	self.getTopBid(){
-		return topBid;
-	}
-	self.getName(){
-		return name;
-	}
-	self.getItemID(){
-		return ID;
-	}
+
 }

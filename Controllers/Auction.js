@@ -5,11 +5,6 @@ exports.Auction = function(nameP,IDP) {
 		name: nameP,
 		ID: IDP
 	}
-	self.getName(){
-		return name;
-	}
-	self.getID(){
-		return ID;
-	}
+
 	
 }

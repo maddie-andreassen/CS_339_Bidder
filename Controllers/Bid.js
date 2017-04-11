@@ -7,16 +7,5 @@ exports.Bid = function(bidIDP,bidAmountP,itemIDP,userIDP) {
 		itemID: itemIDP,
 		userID: userIDP,
 	}
-	self.getBidID(){
-		return bidID;
-	}
-	self.getBidAmount(){
-		return bidAmount;
-	}
-	self.getItemID(){
-		return itemID;
-	}
-	self.getUserID(){
-		return userID;
-	}
+
 }
