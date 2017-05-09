@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-<p> dsaklfjklsdjf </p>
-
-</body>
-</html>
+<h1> ITEMS </h1>
+<div ng-show="auction.items.length > 0" ng-for="item in auction.items">
+	<fieldset>
+		<legend id="legend">{{item.title}}</legend>
+		Description: {{item.des}}<br>
+		Bid: {{item.bid}}<br>
+		Status: {{item.status}}<br>
+	</fieldset>
+	<legend id="legend"></legend>
+	<br><br>
+</div>

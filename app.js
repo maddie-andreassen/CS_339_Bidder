@@ -81,24 +81,49 @@ app.controller('LoginCtrl', function LoginCtrl($scope, $socket) {
 		pass: ""
 	};
 	
-	$scope.login = function(){
-		$scope.user.name = $scope.loginUser.name;
-		$scope.user.pass = $scope.loginUser.pass;
+
+	var username = $scope.loginUser.name;
+	var password = $scope.loginUser.pass;
+	//puts data into string for sending
+	var sendLoginData = {username: username, password: password };	
+	
+	$socket.emit('sendLoginData', sendLoginData);
+	
+	$socket.on('sendpasswordverification', function(data){
+	
+		if(data.correct == 1)
+		{
+			$scope.user.name = data.name;
+			$scope.user.pass = data.pass;
 		
-		if($scope.user.name === "host"){
-			$scope.userStatus.isHost = true;
-		} 
-		else{			
-			$scope.userStatus.isUser = true;
-		} 
-	};
+			if($scope.user.name === "host"){
+				$scope.userStatus.isHost = true;
+			} 
+			else{			
+				$scope.userStatus.isUser = true;
+			} 
+		}
 });
+});
+
+
+	
 app.controller('CreateAccountCtrl', function CreateAccountCtrl($scope, $socket) {
 	console.log("Inside CreateAccountCtrl");
+		
 	$scope.createUser = {
 		name: "",
 		pass: ""
 	};
+	var username = $scope.createUser.name;
+	var password = $scope.createUser.pass;
+	console.log($scope);
+	//puts data into string for sending
+	var sendAccountData = {username: username, password: password };	
+	
+	$socket.emit('sendAccountData', sendAccountData);
+	
+	
 	
 	$scope.createAccount = function(){
 		$scope.user.name = $scope.createUser.name;
@@ -109,8 +134,12 @@ app.controller('CreateAccountCtrl', function CreateAccountCtrl($scope, $socket) 
 		else{			
 			$scope.userStatus.isUser = true;
 		} 
+	
 	};
 });
+
+
+
 app.controller('BidderCtrl', function BidderCtrl($scope, $socket) {
 	console.log("Inside BidderCtrl");
 

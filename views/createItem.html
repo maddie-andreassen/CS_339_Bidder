@@ -1,0 +1,8 @@
+<h1>CREATE ITEM</h1>
+<fieldset>
+	<legend id="legend">Item</legend>
+	Title: <input type="text" ng-model="item.title"/><br>
+	Description: <input type="text-area" ng-model="item.des"/><br>
+	Minimum Bid: <input type="number" ng-model="item.bid" min="0" step="any"/><br>
+	<button ng-click="addItem()">Add</button>
+</fieldset>

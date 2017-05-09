@@ -1,11 +1,9 @@
-<p>LOGIN</p>
 <div id='login'>
-  <form id='formlogin'>
-    <fieldset>
-      <legend id='legend'> login </legend>
-      <p> username: 
-        <input type='text' id='username' required/>
-	</p>
-	</fieldset>
-	</form>
+<h1>LOGIN</h1>
+<fieldset>
+	<legend id="legend">Login</legend> 
+	Username: <input type="text" ng-model="loginUser.name" required><br><br> 
+	Password: <input type="text" ng-model="loginUser.pass"><br><br> 
+	<button ng-click="login()">Login</button>
+</fieldset>
 </div>

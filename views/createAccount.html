@@ -1,1 +1,9 @@
-<p>CREATE ACCOUNT</p>
+<div id='createAccount'>
+<h1>CREATE ACCOUNT</h1>
+<fieldset>
+	<legend id="legend">Create New Account</legend>
+	New Username: <input type="text" ng-model="createUser.name" required><br><br> 
+	New Password: <input type="text" ng-model="createUser.pass"><br><br> 
+	<button ng-click="createAccount()">Create Account</button>
+</fieldset>
+<div>

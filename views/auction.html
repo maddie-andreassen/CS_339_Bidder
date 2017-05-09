@@ -1,0 +1,27 @@
+<h1>AUCTION</h1>
+<div ng-show="userStatus.isHost">
+<button ng-click="startAuction()">
+	<span ng-if="!auction.status">START</span>
+	<span ng-if="auction.status">END</span>
+</button><br>
+{{errorStatus}}
+<br>
+</div>
+
+<div ng-show="!auction.status">
+	<p>Auction has not started</p>
+</div>
+<div ng-show="auction.status">
+	<fieldset>
+		<legend id="legend">{{auction.currItem.title}}</legend>
+		Description: {{auction.currItem.des}}<br>
+		Current Bid: {{auction.currItem.bid}}<br>
+		Current Holder: {{auction.currItem.purchasedBy}}<br>
+	</fieldset>
+	
+	Enter Bid Amount: <input type="number" ng-model="bidAmount" min="auction.currItem.minBid" step="any"/>
+	<button ng-click="bidOnItem()">BID</button>
+	<br><br>
+	<button ng-show="userStatus.isHost" ng-click="nextItem()">NEXT</button>
+	{{bidStatus}}
+</div>
